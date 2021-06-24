@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap");
+:root {
+  --primary: #1a253f;
+  --dark: #151a33;
+  --secondary: #2b55cc;
+  --info: #4d79f6;
+  --ternary: #848db3;
+  --pure: #eff2f9;
+  --fade: #7081b9;
+  --mild: #8997bd;
+  --footer: #212a4a;
+  --black: #060b1b;
+  --twitter: #4ac7ec;
+  --dribble: #ff5da0;
+  --success: #1ecab8;
+  --anger: #f1646c;
+  --dark-blue: #28365f;
+  --github: #333;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "IBM Plex Sans", sans-serif;
+  background: var(--dark);
+  -webkit-font-smoothing: antialized;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1;
+  margin: 0;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+nav {
+  background: var(--primary);
+  padding: 1.6rem 0;
+}
+nav .inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .inner .logo {
+  text-transform: uppercase;
+  color: var(--pure);
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  width: 50%;
+}
+nav .inner .logo span {
+  color: var(--info);
+}
+nav .inner button {
+  background: var(--secondary);
+  border: none;
+  padding: 0.6rem 1rem;
+  color: var(--pure);
+  font-size: 14px;
+  border-radius: 4px;
+}
+section.profile {
+  background: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem;
+  margin-top: 30px;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 25% 100%, 0 80%);
+  padding-bottom: 4rem;
+}
+section.profile .left {
+  flex: 2;
+  display: flex;
+  align-items: center;
+}
+section.profile .right {
+  flex: 1;
+}
+section.profile .left h2 {
+  color: var(--fade);
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 1px;
+}
+section.profile .left p {
+  color: var(--mild);
+  font-size: 14px;
+}
+section.profile .left img {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+section.profile .left .avatar_block {
+  position: relative;
+  margin-right: 2rem;
+}
+section.profile .left .avatar_block span {
+  position: absolute;
+  right: 4px;
+  bottom: 4px;
+  background: var(--info);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--pure);
+  box-shadow: 0px 0px 20px 0px rgba(32, 41, 54, 0.05);
+  cursor: pointer;
+}
+section.profile .right ul.contact {
+  list-style-type: none;
+  margin-bottom: 1.6rem;
+}
+section.profile .right ul.contact li {
+  color: var(--ternary);
+  font-size: 14px;
+  margin-bottom: 0.7rem;
+}
+section.profile .right ul.contact li a:link {
+  color: var(--ternary);
+}
+section.profile .right ul.contact li a:hover {
+  color: var(--secondary);
+  cursor: pointer;
+}
+section.profile .right ul.contact li i {
+  font-size: 18px;
+  margin-right: 0.3rem;
+}
+section.profile .right ul.socials {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+section.profile .right ul.socials li {
+  margin-right: 0.8rem;
+}
+section.profile .right ul.socials li a {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: var(--pure);
+  line-height: 36px;
+  text-align: center;
+}
+section.profile .right ul.socials li:nth-child(1) a {
+  background: var(--secondary);
+}
+section.profile .right ul.socials li:nth-child(2) a {
+  background: var(--twitter);
+}
+section.profile .right ul.socials li:nth-child(3) a {
+  background: var(--github);
+}

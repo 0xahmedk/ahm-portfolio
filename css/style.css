@@ -73,6 +73,7 @@ nav .inner button {
   color: var(--pure);
   font-size: 14px;
   border-radius: 4px;
+  cursor: pointer;
 }
 section.profile {
   background: var(--black);
@@ -84,10 +85,20 @@ section.profile {
   clip-path: polygon(0 0, 100% 0, 100% 80%, 25% 100%, 0 80%);
   padding-bottom: 4rem;
 }
+section.profile img:hover {
+  opacity: 0.7;
+}
 section.profile .left {
   flex: 2;
   display: flex;
   align-items: center;
+}
+section.profile .left .cd-headline.loading-bar .cd-words-wrapper::after {
+  background: linear-gradient(to right, var(--secondary), var(--success));
+}
+section.profile .left p b {
+  padding-bottom: 1rem;
+  font-weight: 400;
 }
 section.profile .right {
   flex: 1;
@@ -127,6 +138,9 @@ section.profile .left .avatar_block span {
   box-shadow: 0px 0px 20px 0px rgba(32, 41, 54, 0.05);
   cursor: pointer;
 }
+section.profile .left .avatar_block span:hover {
+  opacity: 0.7;
+}
 section.profile .right ul.contact {
   list-style-type: none;
   margin-bottom: 1.6rem;
@@ -162,6 +176,11 @@ section.profile .right ul.socials li a {
   border-radius: 50%;
   color: var(--pure);
   line-height: 36px;
+  text-align: center;
+}
+section.profile .right ul.socials li a:hover {
+  opacity: 0.7;
+
   text-align: center;
 }
 section.profile .right ul.socials li:nth-child(1) a {

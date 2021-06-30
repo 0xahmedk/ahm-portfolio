@@ -104,5 +104,8 @@ $(document).ready(function () {
   });
 
   // Slider
-  $(".slider").slick({});
+  $(".slider").slick({
+    arrows: false,
+    autoplay: true,
+  });
 });

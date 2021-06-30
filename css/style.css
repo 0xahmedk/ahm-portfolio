@@ -31,6 +31,7 @@ body {
   font-family: "IBM Plex Sans", sans-serif;
   background: var(--dark);
   -webkit-font-smoothing: antialized;
+  padding-bottom: 4rem;
 }
 
 h1,
@@ -248,7 +249,7 @@ section.about .content p {
   letter-spacing: 0.1px;
   margin-bottom: 1rem;
 }
-section.about .content .left button {
+.styled__button {
   background: var(--secondary);
   color: white;
   padding: 4px 8px;
@@ -522,4 +523,195 @@ section.work .work__wrapper .slider__wrapper .slider .slide {
 
 section.work .work__wrapper .slider__wrapper {
   overflow: hidden;
+}
+
+section.partners {
+  background: var(--dark-grey);
+}
+
+section.partners .brands__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section.contact .wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-top: 40px;
+  align-items: center;
+}
+
+section.contact .wrapper .left > div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+section.contact .wrapper .left > div div:nth-child(1) {
+  margin-right: 10px;
+}
+
+section.contact .wrapper .left .icon {
+  font-size: 30px;
+  color: var(--info);
+}
+
+section.contact .wrapper .left h4 {
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+section.contact .wrapper .left {
+  color: var(--ternary);
+}
+
+section.contact .wrapper .left h4 + span {
+  font-weight: 100;
+  font-size: 14px;
+}
+
+section.contact .wrapper .right .form__group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+section.contact .wrapper .right .form__group > div {
+  display: flex;
+  flex-direction: column;
+}
+
+section.contact .wrapper .right .form__group > div label {
+  color: var(--ternary);
+  margin-bottom: 8px;
+}
+
+section.contact .wrapper .right .form__group > div input,
+section.contact .wrapper .right .form__group.textarea__wrapper textarea {
+  padding: 10px;
+  border-radius: 4px;
+  background: transparent;
+  border: 1px solid var(--dark-blue);
+  color: var(--ternary);
+  font-size: 16px;
+}
+
+section.contact .wrapper .right .form__group > div input:focus,
+section.contact .wrapper .right .form__group.textarea__wrapper textarea:focus {
+  border-color: var(--secondary);
+  outline: none;
+}
+section.contact .wrapper .right .form__group.textarea__wrapper {
+  display: block;
+  width: 100%;
+}
+
+footer {
+  background: var(--footer);
+  text-align: center;
+  padding: 2rem 0rem;
+  font-size: 14px;
+  color: var(--ternary);
+}
+
+/* Media Queries */
+@media (max-width: 1280px) {
+  .container {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 1024px) {
+  section.profile {
+    flex-direction: column;
+    align-items: flex-start;
+    clip-path: none;
+  }
+  section.profile .left {
+    margin-bottom: 2rem;
+  }
+  section.profile .right {
+    align-self: flex-end;
+  }
+  section.work .work__wrapper {
+    display: block;
+  }
+  section.work .work__wrapper .slider__wrapper {
+    margin-bottom: 8rem;
+  }
+  section.partners {
+    margin-top: 4rem;
+  }
+}
+
+@media (max-width: 970px) {
+  section.skills .content {
+    display: block;
+  }
+  section.skills .content .left {
+    margin-bottom: 6rem;
+  }
+  section.partners .brands__wrapper {
+    flex-wrap: wrap;
+  }
+  section.partners .brands__wrapper img {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  section.about .content {
+    display: block;
+  }
+  section.about .content .left {
+    margin-bottom: 6rem;
+  }
+  section.contact .wrapper {
+    display: block;
+  }
+  section.contact .wrapper .left {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  section.counter__section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  section.counter__section > div {
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 576px) {
+  section.profile {
+    align-items: center;
+  }
+  section.profile .right {
+    align-self: center;
+  }
+  section.profile .left {
+    margin-bottom: 6rem;
+  }
+  section.work .work__wrapper .portfolio .tabs ul {
+    flex-wrap: wrap;
+  }
+
+  section.work .work__wrapper .portfolio .tabs ul li {
+    margin-bottom: 4rem;
+  }
+
+  section.work .work__wrapper .portfolio .portfolio__wrapper {
+    margin-top: 0;
+  }
+
+  section.contact .wrapper .right .form__group {
+    grid-template-columns: 1fr;
+  }
 }

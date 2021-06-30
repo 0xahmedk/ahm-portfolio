@@ -143,6 +143,9 @@ section.profile .left .avatar_block span {
 section.profile .left .avatar_block span:hover {
   opacity: 0.7;
 }
+section.profile .left .avatar_block a {
+  color: white;
+}
 section.profile .right ul.contact {
   list-style-type: none;
   margin-bottom: 1.6rem;
@@ -366,6 +369,20 @@ section.skills .skills__wrapper .skill-box .progress__wrap .progress__bar {
   transition: all 3s ease-in-out;
 }
 
+/* Fading Animation for ToolTip */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 section.skills
   .skills__wrapper
   .skill-box
@@ -379,6 +396,7 @@ section.skills
   color: var(--ternary);
   font-size: 16px;
   text-transform: uppercase;
+  animation: fadeIn ease 10s;
 }
 
 section.counter__section {
@@ -421,6 +439,8 @@ section.counter__section > div h5 {
 section.work .work__wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
 }
 
 section.work .work__wrapper .portfolio .tabs ul {
@@ -440,12 +460,19 @@ section.work .work__wrapper .portfolio .tabs ul li a {
 section.work .work__wrapper .portfolio .tabs ul li a.active {
   border-color: var(--info);
   color: var(--info);
+  transition: all 0.3s ease-in-out;
 }
 
 section.work .work__wrapper .portfolio .portfolio__wrapper {
   margin-top: 4rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  /* display: grid;
+  grid-template-columns: repeat(3, 1fr); */
+  display: flex;
+  flex-direction: row;
+}
+section.work .work__wrapper .portfolio .portfolio__wrapper .item {
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
 }
 
 section.work .work__wrapper .portfolio .portfolio__wrapper a img {
@@ -453,4 +480,46 @@ section.work .work__wrapper .portfolio .portfolio__wrapper a img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+section.work .work__wrapper .slider__wrapper .icon__wrapper {
+  text-align: center;
+  justify-content: center;
+  color: var(--info);
+  font-size: 24px;
+}
+
+section.work .work__wrapper .slider__wrapper .slider .slide p {
+  color: var(--ternary);
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 1rem;
+  padding-top: 2rem;
+}
+section.work .work__wrapper .slider__wrapper .slider .slide img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+section.work .work__wrapper .slider__wrapper .slider .slide h2 {
+  font-size: 16px;
+  color: var(--info);
+  margin-top: 1rem;
+}
+
+section.work .work__wrapper .slider__wrapper .slider .slide h6 {
+  color: var(--ternary);
+  margin-top: 1rem;
+}
+
+section.work .work__wrapper .slider__wrapper .slider .slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section.work .work__wrapper .slider__wrapper {
+  overflow: hidden;
 }

@@ -51,10 +51,58 @@ $(document).ready(function () {
   let done = 0;
   let counterSection = document.querySelector(".counter__section");
   const sectionObserver = new IntersectionObserver((entries) => {
-    if (entries[0].isIntersecting) {
+    if (entries[0].isIntersecting && done !== 1) {
       done = 1;
       runCounter();
     }
   }, options);
   sectionObserver.observe(counterSection);
+
+  // image filter
+  var wrapper = $(".portfolio__wrapper");
+  wrapper.isotope({
+    filter: "*",
+    layoutMode: "masonry",
+    animationOptions: {
+      duration: 750,
+      easing: "linear",
+    },
+  });
+
+  let links = document.querySelectorAll(".tabs a");
+  links.forEach((link) => {
+    let selector = link.dataset.filter;
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      wrapper.isotope({
+        filter: selector,
+        layoutMode: "masonry",
+        animationOptions: {
+          duration: 750,
+          easing: "linear",
+        },
+      });
+      links.forEach((link) => {
+        link.classList.remove("active");
+      });
+      e.target.classList.add("active");
+    });
+  });
+
+  // Magnific PopUp
+  $(".magnify").magnificPopup({
+    type: "image",
+    gallery: {
+      enabled: true,
+    },
+    zoom: {
+      enabled: true,
+    },
+    duration: 300, // duration of the effect, in milliseconds
+    easing: "ease-in-out",
+    cursor: "mfp-zoom-out-cur",
+  });
+
+  // Slider
+  $(".slider").slick({});
 });
